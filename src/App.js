@@ -18,7 +18,7 @@ function App() {
 
     if (fileSize > 2) {
       toast(
-        'Oops Logo size exceeds 2 MiB, check the expo app icon size please!',
+        'Oops Logo size exceeds 2 MiB, check the expo app icon size please.',
         {
           hideProgressBar: true,
         }
