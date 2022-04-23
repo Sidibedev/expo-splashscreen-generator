@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const splashRef = useRef();
   const [color, setColor] = useColor('hex', '#fff');
+  const [displaySplash, setDisplaySplash] = useState(false);
   const [logo, setLogo] = useState('');
   const handleChange = (e) => {
     const file = e.target.files[0];
@@ -28,14 +29,21 @@ function App() {
     }
   };
 
-  const downloadSplash = () => {
-    exportComponentAsPNG(splashRef, {
-      html2CanvasOptions: {
-        onclone: (clonedDoc) => {
-          clonedDoc.getElementById('splash').style.visibility = 'visible';
+  React.useEffect(() => {
+    if (displaySplash) {
+      exportComponentAsPNG(splashRef, {
+        fileName: 'splash',
+        html2CanvasOptions: {
+          onclone: (clonedDoc) => {
+            clonedDoc.getElementById('splash').style.visibility = 'visible';
+          },
         },
-      },
-    });
+      }).then((r) => setDisplaySplash(false));
+    }
+  }, [displaySplash]);
+
+  const downloadSplash = () => {
+    setDisplaySplash(true);
   };
 
   return (
@@ -48,7 +56,6 @@ function App() {
         }}
       />
       <header className="App-header">
-
         <h3>Expo SplashScreen Generator.</h3>
 
         <LogoPickerContainer logo={logo} handleChange={handleChange} />
@@ -59,8 +66,9 @@ function App() {
 
         <Footer />
 
-        <SplashScreen logo={logo} color={color} ref={splashRef} />
-
+        {displaySplash ? (
+          <SplashScreen logo={logo} color={color} ref={splashRef} />
+        ) : null}
       </header>
     </div>
   );
@@ -88,7 +96,7 @@ const SplashScreen = React.forwardRef((props, ref) => {
   );
 });
 
-const LogoPickerContainer = ({ logo, handleChange }) => (
+const LogoPickerContainer = React.memo(({ logo, handleChange }) => (
   <>
     <img src={logo ? logo : logoPlaceholder} className="logo-preview" />
 
@@ -98,9 +106,9 @@ const LogoPickerContainer = ({ logo, handleChange }) => (
     </label>
     <input id="file-upload" type="file" onChange={handleChange} />
   </>
-);
+))
 
-const ColorPickerContainer = ({ color, setColor }) => (
+const ColorPickerContainer = React.memo(({ color, setColor }) => (
   <>
     <div className="color-picker-container">
       <ColorPicker
@@ -118,15 +126,15 @@ const ColorPickerContainer = ({ color, setColor }) => (
       color is white
     </span>
   </>
-);
+));
 
-const DownloadButton = ({ disabled, onClick }) => (
+const DownloadButton = React.memo(({ disabled, onClick }) => (
   <button disabled={disabled} className="submit-button" onClick={onClick}>
     <i className="fa fa-cloud-download icon-black"></i> Download my splashscreen
   </button>
-);
+))
 
-const Footer = () => (
+const Footer = React.memo(() => (
   <div
     style={{
       position: 'absolute',
@@ -140,7 +148,13 @@ const Footer = () => (
         @mouhamedaly
       </a>
     </span>
+    <span className="footer-text" style={{ marginLeft: 40 }}>
+      <i className="fa fa-github"></i>{" "}
+      <a target="_blank" href="https://github.com/Sidibedev/expo-splashscreen-generator">
+        Github repo
+      </a>
+    </span>
   </div>
-);
+))
 
 export default App;

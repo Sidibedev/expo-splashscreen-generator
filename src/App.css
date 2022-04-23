@@ -12,8 +12,10 @@ input[type='file'] {
   display: none;
 }
 
+
+
 .custom-file-upload {
-  border: 2px solid #232323;
+  border: 2px solid #dbbfbf;
   border-radius: 15px;
   display: inline-block;
   padding: 6px 12px;
@@ -34,9 +36,9 @@ input[type='file'] {
 
 
 .color-picker-desc {
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
-  width: 25%;
+  width: 30%;
 }
 .footer-text {
   font-size: 14px;
@@ -82,6 +84,8 @@ input[type='file'] {
 }
 a {
   color: #fff400;
+  text-decoration: none;
+
 }
 
 .submit-button:disabled {
