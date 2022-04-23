@@ -137,9 +137,7 @@ const DownloadButton = React.memo(({ disabled, onClick }) => (
 const Footer = React.memo(() => (
   <div
     style={{
-      position: 'absolute',
-      right: 40,
-      bottom: 10,
+      marginTop: 40
     }}
   >
     <span className="footer-text">
