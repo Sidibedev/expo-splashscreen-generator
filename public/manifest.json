@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Expo SplashScreen Generator",
+  "name": "Expo SplashScreen Generator",
   "icons": [
     {
       "src": "favicon.ico",

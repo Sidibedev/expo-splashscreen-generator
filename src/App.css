@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #0b0b0b;
 }
 
 .App-logo {
@@ -7,27 +8,94 @@
   pointer-events: none;
 }
 
+input[type='file'] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 2px solid #232323;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+.color-picker-container {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+
+.color-picker-desc {
+  font-size: 14px;
+  text-align: center;
+  width: 25%;
+}
+.footer-text {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: #ccc;
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding-top: 20px;
+  background-color: #0b0b0b;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(15px + 2vmin);
+  color: #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-preview {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
 }
 
+.icon-yellow {
+  color: #fff400;
+}
+
+.icon-black {
+  color: #0b0b0b;
+}
+
+.submit-button {
+  margin: 50px;
+  background-color: #fff400;
+  padding: 15px;
+  border-radius: 100px;
+  font-size: 19px;
+  font-family: Work sans;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+a {
+  color: #fff400;
+}
+
+.submit-button:disabled {
+  margin: 50px;
+  color: #0b0b0b;
+  opacity: 0.2;
+  padding: 15px;
+  border-radius: 100px;
+  font-size: 19px;
+  font-family: Work sans;
+  font-weight: bold;
+  border: 0;
+  cursor: default;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
