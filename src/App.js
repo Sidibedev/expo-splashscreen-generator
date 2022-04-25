@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
 import { useRef } from 'react';
-import { exportComponentAsPNG } from 'react-component-export-image';
 import logoPlaceholder from './logoplaceholder.png';
 import { ColorPicker, useColor } from 'react-color-palette';
 import 'react-color-palette/lib/css/styles.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { exportComponentAsPNG } from './lib';
 function App() {
   const splashRef = useRef();
   const [color, setColor] = useColor('hex', '#fff');
