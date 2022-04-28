@@ -7,6 +7,7 @@ import 'react-color-palette/lib/css/styles.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { exportComponentAsPNG } from './lib';
+import ReactGa from "react-ga"
 function App() {
   const splashRef = useRef();
   const [color, setColor] = useColor('hex', '#fff');
@@ -38,7 +39,14 @@ function App() {
             clonedDoc.getElementById('splash').style.visibility = 'visible';
           },
         },
-      }).then((r) => setDisplaySplash(false));
+      }).then((r) => {
+        setDisplaySplash(false)
+        ReactGa.event({
+          category: "BUTTON",
+          action: "DOWNLOAD",
+          label: "SUCCESSFUL_DOWLOAD_SPLASHSCREEN"
+        })
+      });
     }
   }, [displaySplash]);
 
@@ -90,7 +98,7 @@ const SplashScreen = React.forwardRef((props, ref) => {
       }}
     >
       <div style={{ textAlign: 'center' }}>
-        <img src={props.logo} style={{ width: 300, height: 300 }} />
+        <img alt='SplashScreen' src={props.logo} style={{ width: 300, height: 300 }} />
       </div>
     </div>
   );
@@ -98,7 +106,7 @@ const SplashScreen = React.forwardRef((props, ref) => {
 
 const LogoPickerContainer = React.memo(({ logo, handleChange }) => (
   <>
-    <img src={logo ? logo : logoPlaceholder} className="logo-preview" />
+    <img alt='logo' src={logo ? logo : logoPlaceholder} className="logo-preview" />
 
     <label htmlFor="file-upload" className="custom-file-upload">
       <i className="fa fa-cloud-upload icon-yellow"></i> Click to upload your
@@ -142,13 +150,13 @@ const Footer = React.memo(() => (
   >
     <span className="footer-text">
       Made with <i className="fa fa-heart icon-yellow"></i> by{' '}
-      <a target="_blank" href="https://twitter.com/mouhamedaly01">
+      <a rel="noreferrer" target="_blank" href="https://twitter.com/mouhamedaly01">
         @mouhamedaly
       </a>
     </span>
     <span className="footer-text" style={{ marginLeft: 40 }}>
       <i className="fa fa-github"></i>{" "}
-      <a target="_blank" href="https://github.com/Sidibedev/expo-splashscreen-generator">
+      <a rel="noreferrer" target="_blank" href="https://github.com/Sidibedev/expo-splashscreen-generator">
         Github repo
       </a>
     </span>
