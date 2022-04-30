@@ -116,7 +116,7 @@ const LogoPickerContainer = React.memo(({ logo, handleChange }) => (
   </>
 ))
 
-const ColorPickerContainer = React.memo(({ color, setColor }) => (
+export const ColorPickerContainer = React.memo(({ color, setColor }) => (
   <>
     <div className="color-picker-container">
       <ColorPicker
