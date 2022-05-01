@@ -1,0 +1,40 @@
+{
+  "files": {
+    "app.js": "/static/js/app.0cffc780.chunk.js",
+    "app.js.map": "/static/js/app.0cffc780.chunk.js.map",
+    "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
+    "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
+    "static/js/2.01244321.chunk.js": "/static/js/2.01244321.chunk.js",
+    "static/js/2.01244321.chunk.js.map": "/static/js/2.01244321.chunk.js.map",
+    "fonts/Poppins_100Thin.ttf": "/./fonts/Poppins_100Thin.ttf",
+    "fonts/Poppins_100Thin_Italic.ttf": "/./fonts/Poppins_100Thin_Italic.ttf",
+    "fonts/Poppins_200ExtraLight.ttf": "/./fonts/Poppins_200ExtraLight.ttf",
+    "fonts/Poppins_200ExtraLight_Italic.ttf": "/./fonts/Poppins_200ExtraLight_Italic.ttf",
+    "fonts/Poppins_300Light.ttf": "/./fonts/Poppins_300Light.ttf",
+    "fonts/Poppins_300Light_Italic.ttf": "/./fonts/Poppins_300Light_Italic.ttf",
+    "fonts/Poppins_400Regular.ttf": "/./fonts/Poppins_400Regular.ttf",
+    "fonts/Poppins_400Regular_Italic.ttf": "/./fonts/Poppins_400Regular_Italic.ttf",
+    "fonts/Poppins_500Medium.ttf": "/./fonts/Poppins_500Medium.ttf",
+    "fonts/Poppins_500Medium_Italic.ttf": "/./fonts/Poppins_500Medium_Italic.ttf",
+    "fonts/Poppins_600SemiBold.ttf": "/./fonts/Poppins_600SemiBold.ttf",
+    "fonts/Poppins_600SemiBold_Italic.ttf": "/./fonts/Poppins_600SemiBold_Italic.ttf",
+    "fonts/Poppins_700Bold.ttf": "/./fonts/Poppins_700Bold.ttf",
+    "fonts/Poppins_700Bold_Italic.ttf": "/./fonts/Poppins_700Bold_Italic.ttf",
+    "fonts/Poppins_800ExtraBold.ttf": "/./fonts/Poppins_800ExtraBold.ttf",
+    "fonts/Poppins_800ExtraBold_Italic.ttf": "/./fonts/Poppins_800ExtraBold_Italic.ttf",
+    "fonts/Poppins_900Black.ttf": "/./fonts/Poppins_900Black.ttf",
+    "fonts/Poppins_900Black_Italic.ttf": "/./fonts/Poppins_900Black_Italic.ttf",
+    "favicon-16.png": "/favicon-16.png",
+    "favicon-32.png": "/favicon-32.png",
+    "favicon.ico": "/favicon.ico",
+    "index.html": "/index.html",
+    "manifest.json": "/manifest.json",
+    "serve.json": "/serve.json",
+    "static/js/2.01244321.chunk.js.LICENSE.txt": "/static/js/2.01244321.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.2e9f1821.js",
+    "static/js/2.01244321.chunk.js",
+    "static/js/app.0cffc780.chunk.js"
+  ]
+}
