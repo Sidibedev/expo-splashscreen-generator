@@ -7,7 +7,7 @@ import {
     View,
 } from "react-native";
 import tinycolor from "tinycolor2";
-import { COLORS } from "../constants/colors";
+import { COLORPICKER_COLORS } from "../constants/colors";
 
 export const toState = (data, oldHue) => {
     const color = data.hex ? tinycolor(data.hex) : tinycolor(data);
@@ -79,11 +79,10 @@ export function ColorPicker({
 }) {
 
     const [text, onTextChanged] = React.useState("FFFFFF");
-
     const COLOR_SIZE = 24;
     const PADDING = 12;
     const SCROLL_HEIGHT = COLOR_SIZE + PADDING * 2;
-    const COLORS = React.useMemo(() => defaultColors.reverse(), []);
+    const COLORS = React.useMemo(() => COLORPICKER_COLORS.reverse(), []);
     return (
         <ScrollView
             {...props}
@@ -106,7 +105,7 @@ export function ColorPicker({
             pagingEnabled
         >
             {COLORS.map((color) => (
-                <TouchableOpacity onPress={() => onValueChanged(color)}>
+                <TouchableOpacity key={color} onPress={() => onValueChanged(color)}>
                     <ColorView
                         size={COLOR_SIZE}
                         color={color}
@@ -183,32 +182,4 @@ function ColorPickerInput({ size, value, onValueChanged, onSubmit }) {
     );
 }
 
-const defaultColors = [
-    "#f44336",
-    "#e91e63",
-    "#EB144C",
-    "#9900EF",
-    "#9c27b0",
-    "#673ab7",
-    "#3f51b5",
-    "#2196f3",
-    "#03a9f4",
-    "#00bcd4",
-    "#009688",
-    "#4caf50",
-    "#8bc34a",
-    "#7BDCB5",
-    "#00D084",
-    "#ffeb3b",
-    "#ffc107",
-    "#ff9800",
-    "#ff5722",
-    "#607d8b",
-    "#999",
-    "#ABB8C3",
-    "black",
-    "white",
-];
 
-export const randomColor = () =>
-    defaultColors[Math.floor(Math.random() * defaultColors.length)];
