@@ -8,7 +8,6 @@ import { ColorPicker } from './ColorPicker';
 import Footer from './Footer';
 
 const SplashscreenConfig = ({ setColor, setLogo }) => {
-    console.log('setLogo: ');
     const [visibleColorTooltip, setVisibleColorTooltip] = React.useState(false);
     const openCloseTooltip = () => setVisibleColorTooltip(!visibleColorTooltip);
 
@@ -56,7 +55,7 @@ const SplashscreenConfig = ({ setColor, setLogo }) => {
                             content={<ColorPicker onValueChanged={setColor} />}
                             closeOnContentInteraction={false}
                             backgroundColor="rgba(0,0,0,0)"
-                            contentStyle={{ backgroundColor: '#F2F2F2', marginTop: 10 }}
+                            contentStyle={{ backgroundColor: '#F2F2F2', marginTop: 10, borderRadius: 20 }}
                             animated={true}
                             arrowSize={{ width: 16, height: 8 }}
                             placement="bottom"
