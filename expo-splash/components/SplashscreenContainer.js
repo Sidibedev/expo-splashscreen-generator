@@ -7,6 +7,8 @@ import SplashscreenConfig from './SplashscreenConfig';
 import SplashscreenPreview from './SplashscreenPreview';
 import { styles } from '../Style';
 import Empty from './Empty';
+import * as Analytics from 'expo-firebase-analytics';
+
 
 const SplashscreenContainer = () => {
     const [color, setColor] = React.useState(COLORS.secondary);
@@ -16,7 +18,13 @@ const SplashscreenContainer = () => {
     const isMobile = React.useMemo(() => width < 1000, [width])
 
     const downloadSplash = async () => {
-        await generateImagesAsync({ logo, color });
+
+        await generateImagesAsync({ image: logo, color });
+
+        Analytics.logEvent('DOWNLOAD_SPLASHSCREEN', {
+            screen: 'home',
+            purpose: 'Download splashscreen',
+        });
     };
 
     return (

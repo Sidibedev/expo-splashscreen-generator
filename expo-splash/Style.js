@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
         color: COLORS.white,
         fontWeight: "bold",
         fontSize: FONTSIZE.medium,
-        marginBottom: 20,
+        marginBottom: 40,
         fontFamily: FONTS.regular,
         letterSpacing: -0.8
     },

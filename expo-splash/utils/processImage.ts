@@ -75,7 +75,7 @@ export async function generateImagesAsync({
     splash: splashB64,
   });
 
-  const folderName = `expo-splashscreen-${image.slice(0, 10)}.zip`;
+  const folderName = `expo-splashscreen.zip`;
 
   FileSaver.saveAs(content, folderName);
 }
