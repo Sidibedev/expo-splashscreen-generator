@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Expo-SplashScreen",
+    "slug": "Expo-SplashScreen",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyBCCqCKsbw7lRlRW0y5G72ZJYqO84Q7zII",
+          "authDomain": "expo-splashscreen-generator.firebaseapp.com",
+          "projectId": "expo-splashscreen-generator",
+          "storageBucket": "expo-splashscreen-generator.appspot.com",
+          "messagingSenderId": "909358416880",
+          "appId": "1:909358416880:web:f111d352948f50a1501335",
+          "measurementId": "G-N78N1JFJPM"
+        }
+      }
+    }
+  }
+}
