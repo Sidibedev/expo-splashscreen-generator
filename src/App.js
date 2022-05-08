@@ -56,6 +56,9 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{ backgroundColor: '#FFF400', width: "100%", padding: 20 }}>
+        <a href='https://exposplash.co' style={{ color: "black", fontWeight: 'bold' }}>Checkout the brand new version here</a>
+      </div>
       <ToastContainer
         toastStyle={{
           backgroundColor: '#FFF400',
@@ -64,6 +67,7 @@ function App() {
         }}
       />
       <header className="App-header">
+
         <h3>Expo SplashScreen Generator.</h3>
 
         <LogoPickerContainer logo={logo} handleChange={handleChange} />
